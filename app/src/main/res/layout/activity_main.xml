@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MainView"
+    android:background="@drawable/background_color">
+
+    <TextView
+        android:id="@+id/text_view_select_city"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите город !"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material_card_view"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        android:minHeight="200dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_card"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cейчас в "
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/text_view_city_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Москве"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_view_weather_status"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@mipmap/ic_rain_weather" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_view_main_temperature"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+50"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="#717171"
+                                android:textSize="40sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" °С"
+                                android:textColor="#717171"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@mipmap/ic_temperature" />
+                                <TextView
+                                    android:id="@+id/text_view_min_temperature"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="18"
+                                    android:textColor="#717171"
+                                    android:textSize="18sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" - "
+                                    android:textColor="#717171"
+                                    android:textSize="18sp" />
+                                <TextView
+                                    android:id="@+id/text_view_max_temperature"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="20"
+                                    android:textColor="#717171"
+                                    android:textSize="18sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" °С"
+                                    android:textColor="#717171"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@mipmap/ic_humidity" />
+                                <TextView
+                                    android:id="@+id/text_view_humidity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="60"
+                                    android:textColor="#717171"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="%"
+                                    android:textColor="#717171"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@mipmap/ic_atmospheric_pressure" />
+                                <TextView
+                                    android:id="@+id/text_view_atmospheric_pressure"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1100.7"
+                                    android:textColor="#717171"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" hpa"
+                                    android:textColor="#717171"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+        <ProgressBar
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progress_bar"
+            android:indeterminateOnly="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/progress_status"
+            app:layout_constraintTop_toBottomOf="@id/progress_bar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_below="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Уточняем погоду..."
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginBottom="40dp"
+        android:theme="@style/Theme.Custom"
+        android:text="@string/city_Minsk"
+        android:id="@+id/material_central_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/material_left_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/city_Moscow"
+        android:theme="@style/Theme.Custom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/material_central_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/material_right_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/city_Kiev"
+        android:theme="@style/Theme.Custom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/material_central_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
